@@ -1,9 +1,5 @@
 # vtex-d
 
-![npm](https://img.shields.io/npm/dt/vtex-d.svg)
-
-[![NPM](https://nodei.co/npm/vtex-d.png)](https://nodei.co/npm/vtex-d/)
-
 CLI Utils for:
 
  - Deploy files and templates on VTEX CMS
@@ -11,12 +7,11 @@ CLI Utils for:
  - Helpers to create static pages, controller and modules
 
 
-
 ## Installation
 
 ```bash
 
-$ npm install -g vtex-d
+$ npm install -g heraldo663/vtex-d
 
 ```
 
