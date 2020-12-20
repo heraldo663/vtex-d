@@ -44,15 +44,15 @@ class Actions {
 		const isRoot = readFileSync(path.resolve(PROJECTDIR, 'package.json'));
 
 		try {
-			readdirSync(path.resolve(PROJECTDIR, 'build'));
+			readdirSync(path.resolve(PROJECTDIR, 'dist'));
 		} catch(err) {
-			message('error', 'Plese run in root of the project after build all files');
+			message('error', 'Plese run in root of the project after dist all files');
 
 			throw new Error(err);
 		}
 
 		if(!isRoot) {
-			message('error', 'Plese run in root of the project after build all files');
+			message('error', 'Plese run in root of the project after dist all files');
 
 			throw new Error(err);
 		}

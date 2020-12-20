@@ -115,7 +115,7 @@ const getTask = (task, helpers) => {
 	return require('./gulpTasks/' + task)(gulp, $, _);
 };
 
-const clean = () => del('build');
+const clean = () => del('dist');
 
 const predeploy = (done) => {
 	$.util.env.production = true;
@@ -230,12 +230,12 @@ const server = () => {
 			httpPlease({
 				host: portalHost
 			}),
-			serveStatic('./build'),
+			serveStatic('./dist'),
 			proxy(imgProxyOptions),
 			proxy(portalProxyOptions),
 			middlewares.errorHandler
 		] : [],
-		serveStatic: ['./build'],
+		serveStatic: ['./dist'],
 		port: proxyPort,
 		open: false,
 		reloadOnRestart: true
@@ -251,7 +251,7 @@ const server = () => {
 	return $.util.env.page ? bs.create().init({
 		files: ['dist/**', '!dist/**/*.map'],
 		server: {
-			baseDir: ['build']
+			baseDir: ['dist']
 		},
 		ui: false,
 		port: 3002,
